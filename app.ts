@@ -1,0 +1,10 @@
+import express from 'express'
+import bodyParser, { BodyParser } from 'body-parser';
+
+import todoRoutes from './router/todoroute';
+
+const app=express();
+app.use(bodyParser.json())
+app.use(todoRoutes)
+
+app.listen(3000)
